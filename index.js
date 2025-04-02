@@ -59,6 +59,10 @@ const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
   res.status(200).send("Backend is running!");
 });
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Server is healthy!" });
+});
+
 
 app.listen(PORT, () => {
   console.log(`Backend is running on port ${PORT}`);
