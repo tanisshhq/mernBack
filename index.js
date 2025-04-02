@@ -56,6 +56,10 @@ app.use("/api/categories", categoryRoute);
 
 // Use dynamic port allocation for Render
 const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+  res.status(200).send("Backend is running!");
+});
+
 app.listen(PORT, () => {
   console.log(`Backend is running on port ${PORT}`);
 });
